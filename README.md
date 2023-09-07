@@ -18,13 +18,12 @@ To track EOL of hardware asset, OEM support team expects Machine Type Mode and S
       
       select
 	      Computers.Model  As "Machine Type",
-	      Computers.SerialNumber  As "SerailOrIMEI"
+	      Computers.SerialNumber  As "SerialOrIMEI"
       from Computers 
       where <ComputerFilter> AND Computers.Manufacturer="LENOVO"
     
     
-![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/b54653f4-83af-421b-bef7-d2b6277423a4)
-
+![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/c47d5b4f-ab4b-45db-b4e9-1cd73db1b12a)
 
 **Step 4.** Run the report: Either by navigating to **File -> Run Report** OR **Blue Arrow Button on toolbar.**<br />
 This will open the window with all LENOVO assets Model # and Serial # as shown below:
@@ -57,12 +56,12 @@ It will take some time to pull the EOL details of all the  devices.<br />
 **Step 3.** Save the Report.
       
       select
-	      Computers.SerialNumber  As "SerailOrIMEI"
+	      Computers.SerialNumber  As "SerialOrIMEI"
       from Computers 
       where <ComputerFilter> AND Computers.Manufacturer="DELL"
     
     
-![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/2cf7c820-091f-4e9b-8297-873e68c32466)
+![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/65d39ac3-611b-4387-b730-d866141b00b9)
 
 
 **Step 4.** Run the report: Either by navigating to **File -> Run Report** OR **Blue Arrow Button on toolbar.**<br />
@@ -76,7 +75,7 @@ Save as Type: Comma Separated Values(*.csv)
 **Step 6.** Download DellWarranty-CLI.exe from https://www.dell.com/support/home/en-in/drivers/DriversDetails?driverId=63F0W and install it in your system.
 It will take some time to pull the EOL details of all the  devices.<br />
 
-**Step 7.** Search for "Dell Command Warranty" in Command search bar and  and run "Dell Command Warranty" utility. <br />
+**Step 7.** Search for "Dell Command Warranty" in Command search bar and  and run "Dell Command Warranty" utility as Administrator. <br />
 It opens the command prompt. run the below command<br />
  \> DellWarranty-CLI.exe /I=\<Absolute Path for Dell-assets-file.csv file\> /E=\<Absolute path of output file\> <br />
  Example:<br />
