@@ -73,14 +73,16 @@ Save as <br />
 File name: Dell-assets-file <br />
 Save as Type: Comma Separated Values(*.csv)
 
-**Step 6.** Open the link https://pcsupport.lenovo.com/us/en/warrantylookup/batchquery in any browser.<br />
-Click on Browse in Upload your "File  file select" field and select above saved Lenovo-assets-file.xsl. <br />Click on SUBMIT. <br />
-![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/012a44f3-73b1-4f7d-8943-50953efd98e5)
-
+**Step 6.** Download DellWarranty-CLI.exe from https://www.dell.com/support/home/en-in/drivers/DriversDetails?driverId=63F0W and install it in your system.
 It will take some time to pull the EOL details of all the  devices.<br />
 
-**Step 7.** Click on Export "results to Excel" and Save the Query results.<br />
-![image](https://github.com/ShivuChirantana/PDQ-Handson/assets/138813405/4bb464ea-87ab-4c3c-b182-0ac27627da21)
+**Step 7.** Search for "Dell Command Warranty" in Command search bar and  and run "Dell Command Warranty" utility. <br />
+It opens the command prompt. run the below command<br />
+ \> DellWarranty-CLI.exe /I=\<Absolute Path for Dell-assets-file.csv file\> /E=\<Absolute path of output file\> <br />
+ Example:<br />
+ \> DellWarranty-CLI.exe /I=C:\Dell-assets-file.csv /E=C:\Query-Report-Dell.csv <br />
+
+ This command creates Query-Report-Dell.csv in C:\ path.
 
 
 
